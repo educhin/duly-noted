@@ -1,0 +1,12 @@
+class CreateNotes < ActiveRecord::Migration[6.0]
+  def change
+    create_table :notes do |t|
+      t.string :name
+      t.string :octave
+      t.string :image
+      t.string :sound
+      t.belongs_to :clef
+      t.timestamps
+    end
+  end
+end
